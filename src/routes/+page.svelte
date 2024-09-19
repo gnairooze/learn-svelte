@@ -7,6 +7,17 @@
     let string = `this string contains some <strong>HTML!!!</strong>`;
 
 	let count = 0;
+	$: doubled = count * 2;
+
+	$: {
+		console.log(`the count is ${count}`);
+		console.log(`this will also be logged whenever count changes`);
+	}
+
+	$: if (count >= 10) {
+		alert(`${count} is dangerously high!`);
+		count = 0;
+	}
 
 	function increment() {
 		count += 1;
@@ -37,3 +48,7 @@
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>
+
+<p>
+	{count} doubled is {doubled}
+</p>
