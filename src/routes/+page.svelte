@@ -1,9 +1,8 @@
-<script>
-function redirect() {
-    window.location.replace("/intro/");
-}
-</script>
+<h1>Index</h1>
 
-<button on:click={redirect}>
-    Go to /intro
-</button>
+<nav>
+    <ul>
+        <li><a href="/intro-reactivity/">Go to intro-reactivity</a></li>
+        <li><a href="/props/">Go to props</a></li>
+    </ul>
+</nav>

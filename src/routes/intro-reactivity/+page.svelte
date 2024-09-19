@@ -22,6 +22,17 @@
 	function increment() {
 		count += 1;
 	}
+
+	let numbers = [1, 2, 3, 4];
+
+	function addNumber() {
+		//numbers.push(numbers.length + 1);
+		//numbers = numbers;
+		//numbers = [...numbers, numbers.length + 1];
+		numbers[numbers.length] = numbers.length + 1;
+	}
+
+	$: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
 </script>
 
 <style>
@@ -52,3 +63,9 @@
 <p>
 	{count} doubled is {doubled}
 </p>
+
+<p>{numbers.join(' + ')} = {sum}</p>
+
+<button on:click={addNumber}>
+	Add a number
+</button>
