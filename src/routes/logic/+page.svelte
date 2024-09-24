@@ -1,4 +1,6 @@
 <script>
+	import Thing from './Thing.svelte';
+
 	let count = 0;
 
 	function increment() {
@@ -7,7 +9,21 @@
 
     const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 	let selected = colors[0];
+
+	let things = [
+		{ id: 1, name: 'apple' },
+		{ id: 2, name: 'banana' },
+		{ id: 3, name: 'carrot' },
+		{ id: 4, name: 'doughnut' },
+		{ id: 5, name: 'egg' }
+	];
+
+	function handleThingClick() {
+		things = things.slice(1);
+	}
 </script>
+
+<h1>Logic</h1>
 
 <button on:click={increment}>
 	Clicked {count}
@@ -62,3 +78,15 @@
 		box-shadow: inset 3px 3px 4px rgba(0,0,0,0.2);
 	}
 </style>
+
+<hr />
+
+<h2>keyed each blocks</h2>
+
+<button on:click={handleThingClick}>
+	Remove first thing
+</button>
+
+{#each things as thing (thing.id)}
+	<Thing name={thing.name} />
+{/each}
