@@ -43,7 +43,9 @@
 	}
 </style>
 
-<h1>Welcome to {name.toUpperCase()}</h1>
+<h1>intro & reactivity</h1>
+
+<h2>Welcome to {name.toUpperCase()}</h2>
 
 <img {src} alt='{name} dances' />
 

@@ -10,6 +10,8 @@
 	};
 </script>
 
+<h1>props</h1>
+
 <Nested answer={42} />
 <Nested />
 

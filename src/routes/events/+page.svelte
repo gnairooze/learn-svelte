@@ -31,6 +31,7 @@
     m.x = e.clientX;
     m.y = e.clientY;
 }}>
+	<h1>events</h1>
 	The pointer is at {m.x} x {m.y}
 </div>
 

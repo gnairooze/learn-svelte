@@ -45,7 +45,7 @@
     <p>{count} is between 0 and 10</p>
 {/if}
 
-<h1 style="color: {selected}">Pick a colour</h1>
+<h2 style="color: {selected}">Pick a colour</h2>
 
 <div>
   {#each colors as color}
