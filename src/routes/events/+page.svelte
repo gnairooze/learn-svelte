@@ -1,5 +1,5 @@
 <script>
-	import Inner from './Inner.svelte';
+	import Outer from './Outer.svelte';
 
 	let m = { x: 0, y: 0 };
 
@@ -53,5 +53,5 @@
 	
 	<hr />
 	
-	<Inner on:message={handleMessage} />
+	<Outer on:message={handleMessage} />
 </div>
