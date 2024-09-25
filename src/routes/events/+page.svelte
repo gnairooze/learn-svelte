@@ -1,5 +1,7 @@
 <script>
 	import Outer from './Outer.svelte';
+	import BigRedButton from './BigRedButton.svelte';
+	import horn from './horn.mp3';
 
 	let m = { x: 0, y: 0 };
 
@@ -12,6 +14,13 @@
 		alert(event.detail.text);
 	}
 
+	const audio = new Audio();
+	audio.src = horn;
+
+	function handleBigRedClick() {
+		audio.load();
+		audio.play();
+	}
 </script>
 
 <!--<div on:pointermove={handleMove}>
@@ -54,4 +63,8 @@
 	<hr />
 	
 	<Outer on:message={handleMessage} />
+
+	<hr />
+	
+	<BigRedButton on:click={handleBigRedClick} />
 </div>
