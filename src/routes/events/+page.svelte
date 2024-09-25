@@ -1,10 +1,17 @@
 <script>
+	import Inner from './Inner.svelte';
+
 	let m = { x: 0, y: 0 };
 
 	/*function handleMove(event) {
 		m.x = event.clientX;
 		m.y = event.clientY;
 	}*/
+
+	function handleMessage(event) {
+		alert(event.detail.text);
+	}
+
 </script>
 
 <!--<div on:pointermove={handleMove}>
@@ -26,6 +33,7 @@
 		width: 100%;
 		height: 100%;
 		padding: 1rem;
+		border-style: double;
 	}
 
 	.next {
@@ -42,4 +50,8 @@
 	<button on:click|once={() => alert('clicked')}>
 		Click me
 	</button>
+	
+	<hr />
+	
+	<Inner on:message={handleMessage} />
 </div>
