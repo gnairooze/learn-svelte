@@ -6,5 +6,6 @@
         <li><a href="/props/">Go to props</a></li>
         <li><a href="/logic/">Go to logic</a></li>
         <li><a href="/events/">Go to events</a></li>
+        <li><a href="/bindings/">Go to bindings</a></li>
     </ul>
 </nav>
