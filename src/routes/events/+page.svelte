@@ -27,4 +27,19 @@
 		height: 100%;
 		padding: 1rem;
 	}
+
+	.next {
+		position: fixed;
+		left: 0;
+		top: 200px;
+		width: 100%;
+		height: 100%;
+		padding: 1rem;
+	}
 </style>
+
+<div class="next">	
+	<button on:click|once={() => alert('clicked')}>
+		Click me
+	</button>
+</div>
