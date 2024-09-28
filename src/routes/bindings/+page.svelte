@@ -3,6 +3,31 @@
 	let a = 1;
 	let b = 2;
 	let yes = false;
+
+	let questions = [
+		{
+			id: 1,
+			text: `Where did you go to school?`
+		},
+		{
+			id: 2,
+			text: `What is your mother's name?`
+		},
+		{
+			id: 3,
+			text: `What is another personal fact that an attacker could easily find with Google?`
+		}
+	];
+
+	let selected;
+
+	let answer = '';
+
+	function handleSelectSubmit() {
+		alert(
+			`answered question ${selected.id} (${selected.text}) with "${answer}"`
+		);
+	}
 </script>
 
 <h1>bindings</h1>
@@ -47,3 +72,32 @@
 {/if}
 
 <button disabled={!yes}>Subscribe</button>
+
+<hr />
+
+<h2>Insecurity questions</h2>
+
+<form on:submit|preventDefault={handleSelectSubmit}>
+	<select
+		bind:value={selected}
+		on:change={() => (answer = '')}
+	>
+		{#each questions as question}
+			<option value={question}>
+				{question.text}
+			</option>
+		{/each}
+	</select>
+
+	<input bind:value={answer} />
+
+	<button disabled={!answer} type="submit">
+		Submit
+	</button>
+</form>
+
+<p>
+	selected question {selected
+		? selected.id
+		: '[waiting...]'}
+</p>
