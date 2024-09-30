@@ -10,7 +10,9 @@
       { name: 'bindings', path: '/bindings' },
       { name: 'lifecycle', path: '/lifecycle'},
       { name: '- beforeupdate-afterupdate', path: '/lifecycle/beforeupdate-afterupdate'},
-      { name: '- tick', path: '/lifecycle/tick'}
+      { name: '- tick', path: '/lifecycle/tick'},
+      { name: 'stores', path: ''},
+      { name: '- writable-stores', path: '/stores/writable-stores'}
     ];
   </script>
   
