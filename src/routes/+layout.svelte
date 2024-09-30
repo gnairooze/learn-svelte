@@ -8,7 +8,8 @@
       { name: 'logic', path: '/logic' },
       { name: 'events', path: '/events' },
       { name: 'bindings', path: '/bindings' },
-      { name: 'lifecycle', path: '/lifecycle'}
+      { name: 'lifecycle', path: '/lifecycle'},
+      { name: '- beforeupdate-afterupdate', path: '/lifecycle/beforeupdate-afterupdate'}
     ];
   </script>
   

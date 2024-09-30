@@ -1,6 +1,6 @@
 <script>
 	import { onMount} from 'svelte';
-	import { paint } from './gradient.js';
+    import { paint } from './gradient.js';
 
 	onMount(()=> {
 		const canvas = document.querySelector('canvas');

@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"elizabot": "^0.0.3",
 		"learn-svelte": "file:",
 		"marked": "^14.1.2"
 	}
