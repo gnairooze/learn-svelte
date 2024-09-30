@@ -1,4 +1,6 @@
 <script>
+	import { marked } from 'marked';
+
 	let name = 'world';
 	let a = 1;
 	let b = 2;
@@ -33,6 +35,8 @@
 	let flavours = [];
 
 	const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
+	
+	let value = `Some words are *italic*, some are **bold**\n\n- lists\n- are\n- cool`;
 </script>
 
 <h1>bindings</h1>
@@ -142,3 +146,28 @@
 		of {formatter.format(flavours)}
 	</p>
 {/if}
+
+<hr />
+
+<div class="grid">
+	input
+	<textarea bind:value={value}></textarea>
+
+	output
+	<div>{@html marked(value)}</div>
+</div>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: 5em 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 1em;
+		height: 100%;
+	}
+
+	textarea {
+		flex: 1;
+		resize: none;
+	}
+</style>
