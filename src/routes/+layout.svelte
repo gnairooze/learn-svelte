@@ -7,7 +7,8 @@
       { name: 'props', path: '/props' },
       { name: 'logic', path: '/logic' },
       { name: 'events', path: '/events' },
-      { name: 'bindings', path: '/bindings' }
+      { name: 'bindings', path: '/bindings' },
+      { name: 'lifecycle', path: '/lifecycle'}
     ];
   </script>
   
