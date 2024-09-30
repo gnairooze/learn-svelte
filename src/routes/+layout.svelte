@@ -9,7 +9,8 @@
       { name: 'events', path: '/events' },
       { name: 'bindings', path: '/bindings' },
       { name: 'lifecycle', path: '/lifecycle'},
-      { name: '- beforeupdate-afterupdate', path: '/lifecycle/beforeupdate-afterupdate'}
+      { name: '- beforeupdate-afterupdate', path: '/lifecycle/beforeupdate-afterupdate'},
+      { name: '- tick', path: '/lifecycle/tick'}
     ];
   </script>
   
