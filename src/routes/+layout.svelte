@@ -17,11 +17,6 @@
   </script>
   
   <style>
-    html, body {
-    height: 100%;
-    margin: 0;
-    }
-
     .container {
       display: flex;
       height: 98vh; /* Full viewport height */
